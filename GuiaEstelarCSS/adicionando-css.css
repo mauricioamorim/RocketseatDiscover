@@ -1,0 +1,7 @@
+/* import é usado somente dentro do css */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+h1 {
+    font-family: 'Ubuntu';
+    padding: 25px;
+}
