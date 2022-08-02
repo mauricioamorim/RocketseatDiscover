@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display: block e inline</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            height: 100px; /* como é um elemento do tipo block respeita altura */
+            width: 200px; /* como é um elemento do tipo block respeita largura */
+            border: 1px solid red; 
+            /* Vai funcionar o margin top e bottom */
+            margin: 20px;
+        }
+        span{
+            height: 100px; /* como é um elemento do tipo block não respeita altura */
+            width: 200px; /* como é um elemento do tipo block não respeita largura */
+            border: 5px solid red;
+            /* Não vai funcionar o margin top e bottom */
+            margin: 20px;
+
+            /* Se vc quiser que respeite, vc pode transformar ele em block ou inline-block */
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Como a div é block o texto de fora dela ficara embaixo dela
+    </div>
+    Texto inline <span>qualquer coisa</span>
+</body>
+</html>
