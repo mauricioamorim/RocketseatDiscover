@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 200px;
+            border: 7px dashed red;
+            padding: 16px;
+            background-color: rgb(55, 100, 50);
+        }
+        main{
+            color: white;
+            background-image: url(https://source.unsplash.com/random);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover; /* a imagem estica por toda area do elemento */
+            /* a imagem ocupa a porcentagem da area horizontal do elemento */
+            background-size: 50%; /* quando só tem um valor é horizontal */
+            /* a imagem ocupa a porcentagem da area horizontal do elemento */
+            background-size: 50em auto; /* Primeiro valor é horizontal e o segundo vertical */
+            background-size: contain; /* a imagem encolhe ate caber inteira no elemento */
+            
+            /* aqui vc decide se quer q o backgroud começe com: */
+            background-origin: border-box; /* começa debaixo da borda */
+            background-origin: padding-box; /* começa na parte interna do elemento, depois do padding */
+            background-origin: content-box; /* começa na parte interna do elemento, depois da borda e do padding */
+            /* 
+                Ele funciona igual ao background-origin,
+                com a única diferença q ele tambem muda(tira) a cor de fundo
+             */
+            background-clip: padding-box;
+
+            /* Fixa a imagem de fundo no background */
+            background-attachment: fixed;
+
+            /* 
+                shorthand 
+                atenção, é possível colocar mais de um background apenas adicionando 
+                "," e colocando os novos valores do shorthand
+            */
+            background: fixed red url(https://source.unsplash.com/random) no-repeat center top / 50em content-box content-box fixed;
+            
+ 
+            /* background: linear-gradient(45deg, red, yellow); */
+            /*  background: radial-gradient(red, yellow, green); */
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+        <h1>Evolua rápido com a tecnologia.</h1>
+        <p>Junte-se a milhares de devs e acelere na direção dos seus objetivos.</p>
+    </main>
+</body>
+</html>
