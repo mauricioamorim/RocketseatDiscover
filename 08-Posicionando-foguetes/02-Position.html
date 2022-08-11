@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        div{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .bg-azul{
+            background-color: blue;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+        .bg-amarelo{
+            background-color: yellow;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+        }
+        .bg-verde{
+            background-color: green;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+        .bg-vermelho{
+            background-color: red;
+            position: relative;
+            margin-left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        ## Posicionamentos
+
+        Controlar onde, na página, o elemento deve ficar,
+        alterando o fluxo normal dos elementos
+
+        - Name: position
+        - Value: static|relative|absolute|fixed
+
+
+        ## Static
+
+        Segue o fluxo normal da página
+
+
+        ## Relative
+
+        Se move em referência ao elemento pai ou irmão dependendo do valor informado:
+        - position: top|right|bottom|left
+
+
+        ## Absolute
+
+        Se move em refêrencia ao elemento pai ou raiz da página,
+        como se estivesse em um novo layer 
+
+
+        ## Fixed
+
+        Deixa o elemento fixo em relação a página
+
+
+        ## Element Sacking
+
+        O elemento fica empilhado um em cima do outro
+        - z-index: 2
+
+    -->
+    <div class="bg-azul box"></div>
+    <div class="bg-amarelo box"></div>
+    <div class="bg-verde box"></div>
+    <div class="bg-vermelho box"></div>
+</body>
+</html>

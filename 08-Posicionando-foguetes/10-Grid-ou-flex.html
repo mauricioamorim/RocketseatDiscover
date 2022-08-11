@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid ou Flex</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            "header header" /* linha um vai ocupar duas colunas */
+            "main aside" /* linha dois terá o elemento main em uma coluna e aside em outra */
+            "footer footer"; /* linha tres vai ocupar duas colunas */
+            grid-template-rows: 40px 1fr 30px; /* define a altura de cada linha (1fr deixa a altura da segunda linha flexivel, completa a página) */
+            grid-template-columns: 1fr 80px; /* define a altura de cada linha (1fr deixa a largura da primeira coluna da segunda linha flexivel, completa a página) */
+        }
+        header{
+            grid-area: header;
+            background-color: blue;
+            padding: 0 8px;
+
+            display: flex; /* faz os itens ficarem um do lado do outro */
+            justify-content: space-between; /* distribui os itens na largura da pagina */
+            align-items: center; /* Alinhamento no eixo x (deixa o elemento na mesma distacia do topo e footer) */
+        }
+        main{
+            grid-area: main;
+            background-color: green;
+        }
+        aside{
+            grid-area: aside;
+            background-color: gray;
+        }
+        footer{
+            grid-area: footer;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        
+        Lembrando que o flex e o grid alteram os elementos DENTRO DA CAIXA e não ao lado q nem o block e inline
+
+        É possível trabalhar com os dois ao mesmo tempo,
+        porém em elementos diferentes
+        O mais indicado é usar o flex apenas para criar linhas simples
+        e o grid para fazer templates mais complexos
+    -->
+    <header>
+        <div>Topo</div>
+        <div>Menu</div>
+    </header>
+    <main>Conteúdo</main>
+    <aside>Infos adicionais</aside>
+    <footer>Rodapé</footer>
+</body>
+</html>

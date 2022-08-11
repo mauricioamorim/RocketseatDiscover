@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font-variant e font-stretch</title>
+    <style>
+        /* Variação na apresentação da fonte */
+        .p1{
+            font-variant: small-caps;
+        }
+        /* variação na distribuição da fonte, nem todas as fontes tem essa opção */
+        .p2{
+            font-stretch: expanded;
+        }
+        /* altera o espacamento entre letras */
+        .p3{
+            letter-spacing: 1em;
+        }
+        /* altera o espacamento entre as palavras */
+        .p4{
+            word-spacing: 1em;
+        }
+        /* altera a altura da linha */
+        .p5{
+            line-height: 40px;
+            background-color: azure;
+        }
+        /* altera a transformação da linha */
+        .p6{
+            text-transform: uppercase;
+        }
+        /* 
+            Altera aparência decorativa de um texto
+            line: underline|overline|line-through (pode aplica mais de um valor)
+            style: wavy|dotted|double|dashed|solid
+            color: <color> values
+         */
+        .p7{
+            text-decoration: dashed underline green;
+        }
+        /* altera o alinhamento do texto */
+        .p8{
+            text-align: right;
+        }
+        /* 
+            Adiciona sombra ao texto 
+            text-shadow: 2px 2px 10px red; (offset-x | offset-y | blur-radius | color)
+        */
+        .p9{
+            text-shadow: 2px 2px 1px red, 4px 4px 14px blue;
+        }
+        /* shorthand */
+        .p10{
+            /* -style, -variant, weight, -stretch, -size, line-height, e -family */
+            font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">
+        Este texto como exemplo de font-variant small-caps, deixa as letras minusculas no formato das maiusculas sem mudar o tamanho delas
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">Saiba mais</a>
+    </p>
+    <p class="p2">
+        Este texto como exemplo de font-stretch expanded
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch">Saiba mais</a>
+    </p>
+    <p class="p3">
+        Este texto como exemplo de letter-spacing, altera o espacamento entre os caracteres
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">Saiba mais</a>
+    </p>
+    <p class="p4">
+        Este texto como exemplo de word-spacing altera o espacamento entre as palavras
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">Saiba mais</a>
+    </p>
+    <p class="p5">
+        Este texto como exemplo de line-height altera o tamanho da linha
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">Saiba mais</a>
+    </p>
+    <p class="p6">
+        Este texto como exemplo de text-transform uppercase altera a transformação do texto
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">Saiba mais</a>
+    </p>
+    <p class="p7">
+        Este texto como exemplo de text-decoration: dashed underline green; altera a aparência decorativa do texto
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">Saiba mais</a>
+    </p>
+    <p class="p8">
+        Este texto como exemplo de text-align: right; altera o alinhamento do texto
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">Saiba mais</a>
+    </p>
+    <p class="p9">
+        Este texto como exemplo de text-shadow, adiciona sombra ao texto
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">Saiba mais</a>
+    </p>
+    <p class="p10">
+        Este texto como exemplo de shorthand com varias modificações
+    </p>
+</body>
+</html>

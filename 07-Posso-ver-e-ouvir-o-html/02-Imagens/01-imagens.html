@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 300;
+            height: 200;
+        }
+        div{
+            width: 300;
+            height: 200;
+            display: block;/* tive que colocar para ficar bom no navegador */
+        }
+    </style>
+</head>
+<body>
+    <!--
+        <img>
+        - src
+        - alt
+        - title
+        - width
+        - height
+        - adicionando link
+    -->
+    <a href="https://google.com">
+        <img 
+            src="https://source.unsplash.com/random"
+            alt="Texto caso não encontre a imagem"
+            alt="Titulo da imagem"
+        >
+    </a>
+
+    <!--
+        background-img
+        - com a tag style
+        - somente para estilo
+        - não é semântico e falta significado
+    -->
+    <div style="background-image: url('https://source.unsplash.com/random');">
+        Imagem
+    </div>
+
+    <!--
+        Criando título visíveis para as imagens
+
+        <fugure> e <figcaption>
+    -->
+    <a href="#">
+        <fugure class="figure">
+            <img src="https://source.unsplash.com/random" alt="">
+            <figcaption>Colocar um título na imagem</figcaption>
+        </fugure>
+    </a>
+</body>
+</html>

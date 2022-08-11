@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+</head>
+<body>
+    <p>O ideal é usar plataformas de terceiros para não usar banda(internet) do servidor</p>
+    <p>O atributo preload pode ter 3 valores</p>
+    <dl>
+        <dt>none</dt>
+        <dd>Não carrega o video até q seja dado play no video</dd>
+        
+        <dt>metadata</dt>
+        <dd>Carrega somente as informações do video</dd>
+
+        <dt>auto</dt>
+        <dd>carrega tudo ao iniciar a página</dd>
+    </dl>
+    <video poster="url_da_imagem_de_fundo" controls loop muted width="200" height="400" autoplay preload="auto">
+        <!-- Pode ter mais de um video, basta adicionar mais uma tag source -->
+        <source src="./asset/DIRT 5#00Abertura.mp4" type="video/mp4">
+        
+        <!-- Caso não funcione vai exibir essa mensagem -->
+        <p>Este browser não suporta video, baixe-o <a href="./asset/DIRT 5#00Abertura.mp4"></a></p>
+    </video>
+</body>
+</html>

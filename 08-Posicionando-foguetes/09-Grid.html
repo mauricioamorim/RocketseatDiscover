@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            grid-template-areas: 
+            "header header" /* linha um vai ocupar duas colunas */
+            "main aside" /* linha dois terá o elemento main em uma coluna e aside em outra */
+            "footer footer"; /* linha tres vai ocupar duas colunas */
+            grid-template-rows: 40px 1fr 30px; /* define a altura de cada linha (1fr deixa a altura da segunda linha felxivel, completa a página) */
+            grid-template-columns: 1fr 80px; /* define a altura de cada linha (1fr deixa a largura da primeira coluna da segunda linha felxivel, completa a página) */
+        }
+        header{
+            grid-area: header;
+            background-color: blue;
+        }
+        main{
+            grid-area: main;
+            background-color: green;
+        }
+        aside{
+            grid-area: aside;
+            background-color: gray;
+        }
+        footer{
+            grid-area: footer;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        # Grid
+
+        * Posicionamento dos elementos DENTRO DA CAIXA e não ao lado q nem o block e inline
+        * Posicionamento horizontal e vertical ao mesmo tempo
+        * Pode ser flexível ou fixo
+        * Cria espaços para os elementos filhos habitarem
+    -->
+    <header>Topo</header>
+    <main>Conteúdo</main>
+    <aside>Infos adicionais</aside>
+    <footer>Rodapé</footer>
+</body>
+</html>
