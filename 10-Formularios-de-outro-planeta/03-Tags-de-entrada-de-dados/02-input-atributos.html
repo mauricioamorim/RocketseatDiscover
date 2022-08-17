@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Atributos</title>
+</head>
+<body>
+    <!--
+        <input> Atributos comuns
+
+        - autocomplete (user ctrl+tab para ver as opões de valores do autocomplete)
+        - autofocus (só um por página)
+        - disabled
+        - value
+        - name
+
+        (funciona em quase todos os inputs)
+        - required 
+        - readonly (tambem não permite que o valor do input seja alterado)
+        - form (linka o input com o formúlario q ele pertence, ajuda caso o input esteja fora da tag <form>)
+        - placeholder (funciona nos campos do tipo password, search, tel, text, url)
+
+    -->
+    <form id="meu-form">
+        <fieldset>
+            <legend>autocomplete</legend>
+            <label>
+                Email:
+                <input type="email" value="mauricioamorim.contato@gmail.com" disabled autofocus autocomplete="email">
+            </label>
+            <button>Enviar</button>
+        </fieldset>
+    </form>
+    <label >
+        Nome:
+        <input type="text" required form="meu-form" placeholder="Digite seu nome">
+    </label>
+</body>
+</html>

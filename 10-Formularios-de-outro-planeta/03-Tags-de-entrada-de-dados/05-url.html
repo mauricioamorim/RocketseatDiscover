@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url</title>
+</head>
+<body>
+    <!--
+        <input type="url" />
+        - Espera que o usuário digite uma url
+        - Irá validar se o valor digitado é uma url
+        - tem que ter http ou https
+
+        # Atributos
+
+        - title
+        - placeholder
+        - readonly / disabled
+        - value
+        - required
+        - minlenght / maxlenght
+            * O mínimo e/ou máximo valor que o campo irá conter
+        - size 
+            * Tamanho que será exibido o input
+        - pattern
+            * Uso de expressão regular para validar o campo
+            * exemplo: o usuário só poderá colocar domínio .com.br
+                pattern="[.*\.com\.br\/.*]"
+        - list
+            * Linka o input com o formulário a ser enviado caso o 
+            input esteja fora do mesmo
+        - spellcheck
+            * Habilitar a verificação ortográfica para este input
+            * Caso vc use o atributo sem valor "spellcheck" ele vai verificar se
+            o parent onde ele esta inseriodo tem esse atributo setado ou se 
+            o navegador deixa true como padrão 
+
+    -->
+    <form action="">
+        <fieldset>
+            <legend>Exemplo input url</legend>
+            <label for="">
+                URL:
+                <input type="url"
+                placeholder="https://www.odominio.com.br"
+                required
+                minlength="8"
+                spellcheck
+                title="Digite um domínio .com.br"
+                pattern="[.*\.com\.br\/.*]"
+                >
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>

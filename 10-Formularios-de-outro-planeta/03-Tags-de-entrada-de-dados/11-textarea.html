@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea</title>
+</head>
+<body>
+    <!--
+        <textarea>
+        - mais de uma linha
+        - útil para textos grandes
+
+        Atributos
+        - id
+        - name
+        - rows e cols
+        - minlenght e maxlenght
+        - wrap = off (a quebra de linha só acontece quando o usuário dar enter e não quando chega ao final da largurta da caixa)
+        .. outros camins aos <input>s
+            - autocomplete, autofocus, disabled,
+            placeholder, readonly, form, required
+        - as tags de abertura e fechamento devem ficar unidas
+        para não ficar com espaço dentro do textarea
+    -->
+    <form action="">
+        <fieldset>
+            <legend>Exemplo textarea</legend>
+            <label for="">
+                Descreva sua personalidade:
+                <textarea 
+                name="descricao" 
+                wrap="off"
+                cols="30" 
+                rows="10"></textarea>
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>

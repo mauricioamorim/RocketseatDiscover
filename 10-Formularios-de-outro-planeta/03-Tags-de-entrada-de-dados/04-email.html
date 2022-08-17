@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    <!--
+        <input type="email" />
+
+        - Espera que o usuário digite um email
+        - Irá validar se o valor digitado é um email
+
+
+        # Atributos
+
+        - title
+        - placeholder
+        - readonly / disabled
+        - value
+        - required
+        - multiple
+            * o cmapo irá receber um ou mais emails, separado por vírgulas
+        - minlenght / maxlenght
+            * O mínimo e máximo valor que o campo irá conter
+        - size
+            * O tamanho visual da caixa do input
+        - pattern 
+            * Uso de explressão regular para validar
+            * Exemplo: o usuário só poderá colocar email do domínio rocketseat.com
+                pattern="[.+rocketseat\.com\.br]"
+        - list
+            * O id de uma tag <datalist> que está no mesmo documento
+            * <datalist> irá conter uma lista de valores pré definidos a fim de sugerir ao usuário. 
+                * Os valores definidos no <datalist> que não forem compatíveis com o campo, 
+                não serão apresentados como sugestão
+        
+    -->
+    <form>
+        <fieldset>
+            <legend>Formulário Exemplo Email</legend>
+            <datalist id="sugestao-de-email">
+                <option>mauricio@rocketseat.com.br</option>
+            </datalist>
+            <label>
+                Email
+                <input type="email" 
+                    title="Digite um email"
+                    autofocus 
+                    required 
+                    minlength="8"
+                    maxlength="255"
+                    autocomplete="email"
+                    list="sugestao-de-email"
+                    pattern="[.+@rocketseat\.com\.br]"
+                    placeholder="Digite seu e-mail">
+            </label>
+            <button>Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

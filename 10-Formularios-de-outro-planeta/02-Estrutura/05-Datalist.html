@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalist</title>
+</head>
+<body>
+    <!--
+
+        Datalist
+
+            - Lista de valores como sugestão e uma tag <input>
+            - Valores sugestivos e não obrigatórios
+            - Usuários poderão selecionar um dos valores, ou colocar um valor diferente da sugestão
+    
+        <datalist id="fruitsdata">
+            <option>apple</option>
+            <option>banana</option>
+            <option>mango</option>
+            <option>orange</option>
+            <option>cherry</option>
+        </datalist>
+
+        # Atributo "list"
+
+        - Recebe como valor o id de um <datalist> residente no mesmo documento
+        - Tipos de inputs suportados
+            - text
+            - search
+            - url
+            - tel
+            - email
+            - date, month, week, time, datetime-local
+            - number
+            - range
+            - color
+
+        - Valores de datalist que não são compatíveis com o tipo do <input> não serão apresentados
+        - Tipos de input não suportados (conforme especificação)
+            - hidden
+            - password
+            - checkbox
+            - radio
+            - file
+            - ou qualquer tipo de button
+
+
+        # User Agent
+        * Sempre verificar a compatibilidade como browser https://caniuse.com
+    -->
+    <form>
+        <fieldset>
+            <legend>Exemplo Datalist</legend>
+            <label>browsers: 
+                <input type="text" list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </label>
+            <label>Cores: 
+                <input type="color" list="cores" name="cor" id="cor">
+                <datalist id="cores">
+                    <option value="#ff0000">
+                    <option value="#00ff00">
+                    <option value="#0000ff">
+                </datalist>
+            </label>
+        </fieldset>
+    </form>
+</body>
+</html>

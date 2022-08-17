@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas para montar um formulário</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        input, textarea{
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Desenhando</h2>
+    <p>pensar nos requisitos</p>
+    <p>Ajuda a definir as necessidades</p>
+
+    <h3>Dicas</h3>
+    <p>Simples e focado</p>
+    <p>Somente dados necessários</p>
+    <p>Verifique o que te agrada</p>
+
+    <!--
+        Crie um formulário de Contato
+
+        1. O formulário deverá conter um título de nome Contato.
+        Usar fieldset e legend para essa finalidade
+
+        2. O formulário  conterá 3 campos
+            - nome (input texto)
+            - email (input email)
+            - mensagem (textarea)
+
+        3. O formulário deverá conter um botão para enviar
+
+        Atenção: O formulário deverá conter regras de acessibilidade, como o label para cada campo,
+        por exemplo.
+    -->
+    
+    <form>
+        <fieldset>
+            <legend>Contato</legend>
+            <label>
+                Nome: 
+                <input 
+                    type="text" 
+                    name="nome"
+                    title="Digite seu nome"
+                    placeholder="Digite seu nome"
+                    minlength="3"
+                    maxlength="255"
+                />
+            </label>
+            <label>
+                E-mail: 
+                <input 
+                    type="email" 
+                    name="email" 
+                    title="Digite seu e-mail"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    minlength="255"
+                    maxlength="255"
+                    pattern="[.+@rocketseat\.com\.br]"
+                    required  
+                />
+            </label>
+            <label>
+                Mensagem:
+                <textarea 
+                    name="mensagem"
+                    placeholder="Deixe sua mensagem"
+                ></textarea>
+            </label>
+            <button>Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <!--
+        <input type="search">
+
+        - Para campos de busca
+        - É igual ao campo do tipo 'text' mas poderá ser um pouco diferente
+        dependendo do User Agent(navegador)
+
+        # Atributos
+
+        - list / <datalist>
+        - pattern
+        - aria-label (quando não tiver label, vc pode usar aria-label)
+    -->
+    <datalist id="usuarios">
+        <option>Mauricio</option>
+        <option>Renato</option>
+        <option>Leitão</option>
+        <option>Thai</option>
+    </datalist>
+
+    <form>
+        <fieldset>
+            <legend>Exemplo input search</legend>
+            <label>Campo de pesquisa:
+                <input type="search" 
+                list="usuarios" 
+                size="25" 
+                placeholder="Digite o nome do usuário"
+                >
+            </label>
+            <button>Pesquisar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

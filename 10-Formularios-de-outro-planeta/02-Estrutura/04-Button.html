@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button</title>
+    </head>
+    <body>
+        <!--
+            <button>
+
+                - Representa um botão
+                - Usado para enviar formulários
+                - É estilizado pelo user agent
+
+
+                Atributos comuns
+                - type
+                    - submit
+                    - reset
+                    - button
+                - autofocus, quando carregar a página deixa o cursor já focado no botão
+                - disabled
+                - name, é bem usado com o atributo value
+                - value, se vc quiser enviar algo como se fosse um input hidden
+                - form, deve contar o id do formulario q sofrerá a ação do botão,
+                caso ele esteja localizado fora do formulario
+        -->
+        <form>
+            <fieldset>
+                <legend>Exemplo</legend>
+                <label>
+                    Nome
+                    <input type="text">
+                </label>
+                <button autofocus type="submit">Enviar</button>
+                <button disabled type="button" name="id" value="13">Salvar</button>
+                <button type="reset">Limpar</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
