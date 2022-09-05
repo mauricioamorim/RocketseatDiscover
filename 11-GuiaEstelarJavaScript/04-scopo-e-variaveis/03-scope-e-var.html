@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope e Var</title>
+</head>
+<body>
+    <script>
+        /**
+         * Scope
+         *      Escopo determina a visibilidade de alguma variavel no JS
+         * 
+         * 
+         * Block statment 
+         *      (declaração de bloco)
+         * 
+         * LET 
+         *      não é global, ela só existe dentro do escopo criado
+         * 
+         */
+
+        console.log(y);// exibe 
+
+        //iniciando um bloco de escopo
+        {
+            var y = 1;
+
+            console.log(y);// exibe 
+        }
+
+        /** 
+         *  RESUMO
+        */
+        var _e = 1;// existe em todos os escopos
+        let y = 1;// existe somente no escopo onde foi criado e escopos filhos
+        const a = 1;// existe só no escopo onde foi criado, não existe no escopo pai e escopos filhos
+        /** 
+         *  FIM RESUMO
+        */
+
+    </script>
+</body>
+</html>

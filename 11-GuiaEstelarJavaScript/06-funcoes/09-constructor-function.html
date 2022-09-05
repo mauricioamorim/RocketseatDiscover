@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function constructor</title>
+</head>
+<body>
+    <script>
+        /** 
+         * Function() constructor
+         * 
+         * Nada mais é do que um molde que pode se fazer copias
+         * 
+         * * expressão new
+         * * criar um novo objeto
+         * * this keyword
+        */
+
+        function Person(name) {
+            this.name = name
+            this.walk = function(){
+                return this.name+' está andando'
+            }
+        }
+
+        const mauricio = new Person('Maurcio');
+        const alexandre = new Person('Alexandre');
+
+        console.log(mauricio)// Person{}
+        console.log(alexandre)// Person{}
+
+        console.log(mauricio.walk())// Person{}
+        console.log(alexandre.walk())// Person{}
+    </script>
+</body>
+</html>

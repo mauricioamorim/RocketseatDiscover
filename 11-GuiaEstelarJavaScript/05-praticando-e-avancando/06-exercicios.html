@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <script>
+        // 1. Declare uma variável de nome weight
+        let height;
+
+        // 2. Que tipo de dado é a variável acima?
+        console.log(typeof height);// undefined
+
+        /*
+            3. Declare uma variável e atribua valor para cada um dos dados:
+            name: String
+            age: Integer
+            stars: Float
+            isSubscribed: Boolean
+        */
+        let name = 'Mauricio';
+        let age = 40;
+        let weight = 69.6;
+        let isSubscribed = true;
+
+        //4. A variável student abaixo é de que tipo de dados?
+        let student = {};
+        console.log(typeof weight);// Object
+
+        //4.1 Atribua a ela as mesmas propriedades e valores do exercício 3.
+        student = {
+            name: 'Mauricio',
+            age: 40,
+            weight: 69.6,
+            isSubscribed: false
+        }
+
+        /*
+            4.2 Mostre no console a seguinte mensagem:
+                <name> de idade <age> pesa <weight> kg.
+                
+                Atenção, substitua <name>, <age> e <weight> pelos valores de cada propriedade 
+                do objeto
+        */
+        console.log(`${student.name} de idade ${student.age} pesa ${student.weight} kg.`);
+
+        /*
+            5. Declare uma variável de tipo Array, de nome
+            students e atribua a ela nenhum valor, ou seja, semonte o Array vazio
+        */
+        let students = [];
+
+        /*
+            6. Reatribua valor para a variável acimam, colocando 
+            dentro dela o objeto student da questão 4. 
+            (Não copiar e colar o objeto, mas usar o objeto criado e inserir ele no Array)
+        */
+        students = [
+            student
+        ];
+
+        // 7. Coloque no console o valor da posição zero do Array acima
+        console.log(students[0]);
+
+        // 8. Crie um novo student e coloque na posição 1 do Array students
+        const secondStudent = {
+            name: 'Ana',
+            age: 37,
+            weight: 62,
+            isSubscribed: true
+        };
+        students[1] = secondStudent;
+
+        /*
+            9. Sem rodar o código responda qual é a resposta do código abaixo
+            e por que? Após sua resposta, rode o código e veja se vc acertou.
+
+            console.log(a);
+            var a = 1;
+
+            Resposta: Vai exibir undefined
+            Por causa do Hoisting que eleva a declaração da variavel para antes do comando console.log() 
+            o resultado na tela é undefined e não erro de existência. Lembrando que o Hoisting apenas 
+            declara a variável mas não declara seu valor que ocorre apenas após o comando console.log()
+        */
+
+        /*
+            10. Sem rodar o código responda qual é a resposta do código abaixo
+            e por que? Após sua resposta, rode o código e veja se vc acertou.
+
+            console.log(a);
+            let a = 1;
+
+            Resposta: Da erro de referência pq diferente a variável global(var), a let 
+            não sofre elevação no código
+        */
+    </script>
+</body>
+</html>

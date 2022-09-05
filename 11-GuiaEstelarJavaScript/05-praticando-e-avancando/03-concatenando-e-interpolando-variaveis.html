@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenando e interpolando variáveis</title>
+</head>
+<body>
+    <script>
+        // declarando as variáveis em grupo
+        let name, lastName, fullName;
+
+        // atribuindo valor as variáveis
+        name = "Mauricio";
+        lastName = "Silva";
+
+        // concateando as variáveis
+        fullName =  name + lastName;
+
+        // escrita de textos + variáveis
+        console.log("Seu nome completo é "+fullName+"?");
+
+        // escrita de texto interpolando valores com template literals(template strings)
+        console.log(`Seu nome completo é ${name} ${lastName}?"`);
+    </script>
+</body>
+</html>

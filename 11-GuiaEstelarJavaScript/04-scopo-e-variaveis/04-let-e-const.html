@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope e Var</title>
+</head>
+<body>
+    <script>
+        /**
+         * Scope
+         *      Escopo determina a visibilidade de alguma variavel no JS
+         * 
+         * 
+         * Block statment 
+         *      (declaração de bloco)
+         * 
+         * LET 
+         *      é criada somente dentro do escopo
+         * 
+         * CONST
+         * 
+         *      é uma variavel global porém só é possível aterar seu valor 
+         *      redeclarando ela dentro de qualquer escopo
+         * 
+         */
+
+        var _e = 1;// existe em todos os escopos
+        let y = 1;// existe somente no escopo atual e nos filhos
+        const a = 1;// existe só no escopo dela, não existe no escopo pai e nos filhos
+
+        //iniciando um bloco de escopo
+        {
+            
+            //console.log(`exibe erro pq a "const a" só exte no scopo pai, valor de a dentro de um outro escopo = ${a}`);
+            const a = 0; // se quiser vc pode declarar uma variavel dentro desse escopo com o nome
+
+            console.log(`valor de y dentro de um outro escopo = ${y}`);// exibe 1
+            y = 0; // permite mudar seu valor
+
+            console.log(`valor de _e dentro de um outro escopo = ${_e}`);// exibe 1
+            _e = 0; // permite mudar seu valor
+            {
+                let _e = 0.75; // permite criar uma só local ainda daixando existindo a variavel global
+                console.log(`valor de _e dentro de um outro escopo = ${_e}`);// exibe 0.75
+
+                _e = 0.5; // permite redeclarar seu valor global assim
+                console.log(`valor de _e dentro de um outro escopo = ${_e}`);// exibe 0.5
+            }
+
+        }
+        console.log(`valor de a fora do escopo = ${a}`);// exibe 1
+        console.log(`valor de y fora do escopo = ${y}`);// exibe 0
+        console.log(`valor de _e fora do escopo = ${_e}`);// exibe 0
+    </script>
+</body>
+</html>

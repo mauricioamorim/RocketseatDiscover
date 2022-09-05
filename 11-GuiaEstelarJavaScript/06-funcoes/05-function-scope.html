@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function scope</title>
+</head>
+<body>
+    <script>
+        let subject = 'create video';
+        
+        function creatThink1(subject) {
+            subject = 'study';// pego o parametro passado
+            return subject;
+        }
+
+        function creatThink2() {
+            subject = 'study';// sobrescreve o let do escopo anterior
+            return subject;
+        }
+
+        console.log(subject);
+        console.log(creatThink1(subject));
+        console.log(creatThink2());
+    </script>
+</body>
+</html>

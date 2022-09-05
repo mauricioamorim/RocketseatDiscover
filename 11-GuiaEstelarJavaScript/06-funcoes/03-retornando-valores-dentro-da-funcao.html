@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retornando valores dentro da função</title>
+</head>
+<body>
+    <script>
+        /** 
+         * quando da função não tem nome é chamada de function expression ou function anonymous
+         * number1 = parametro 1 (parameter)
+         * number2 = parametro 2 (parameter)
+        */
+        const sum = function (number1, number2) {
+            total = number1 + number2;
+            return total;
+        }
+
+        let number1 = 2;
+        let number2 = 3;
+        console.log(`o número 1 é ${number1}`);
+        console.log(`o número 2 é ${number2}`);
+
+        /** 
+         * executar (execute, run, call, invoke) a função
+         * 2 = argumento 1 (argument)
+         * 3 = argumento 2 (argument)
+        */
+        console.log(`a soma é ${sum(number1, number2)}`);
+
+        /** 
+         * a variável 'total' acabou vindo do escopo da função
+         * isso acontece pq ela está como global, para arrumar esse problema 
+         * basta declarar ela no escopo de bloco let
+        */
+        console.log(`a variável 'total' acabou vindo do escopo da função ${total}`);
+
+        //fim do programa
+        console.log('Fim do programa.');
+    </script>
+</body>
+</html>
