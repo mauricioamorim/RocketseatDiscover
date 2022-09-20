@@ -17,12 +17,11 @@
          *      (declaração de bloco)
          * 
          * LET 
-         *      é criada somente dentro do escopo
+         *      existe somente no escopo atual e nos filhos
          * 
          * CONST
          * 
-         *      é uma variavel global porém só é possível aterar seu valor 
-         *      redeclarando ela dentro de qualquer escopo
+         *      existe só no escopo dela, não existe no escopo pai e nos filhos
          * 
          */
 
@@ -42,16 +41,19 @@
             console.log(`valor de _e dentro de um outro escopo = ${_e}`);// exibe 1
             _e = 0; // permite mudar seu valor
             {
+                console.log(`valor de y dentro do escopo de um escopo = ${y}`);// exibe 0
+                y = 10; // permite mudar seu valor
+
                 let _e = 0.75; // permite criar uma só local ainda daixando existindo a variavel global
-                console.log(`valor de _e dentro de um outro escopo = ${_e}`);// exibe 0.75
+                console.log(`valor de _e dentro do escopo de um escopo = ${_e}`);// exibe 0.75
 
                 _e = 0.5; // permite redeclarar seu valor global assim
-                console.log(`valor de _e dentro de um outro escopo = ${_e}`);// exibe 0.5
+                console.log(`valor de _e dentro do escopo de um escopo = ${_e}`);// exibe 0.5
             }
 
         }
         console.log(`valor de a fora do escopo = ${a}`);// exibe 1
-        console.log(`valor de y fora do escopo = ${y}`);// exibe 0
+        console.log(`valor de y fora do escopo = ${y}`);// exibe 10
         console.log(`valor de _e fora do escopo = ${_e}`);// exibe 0
     </script>
 </body>

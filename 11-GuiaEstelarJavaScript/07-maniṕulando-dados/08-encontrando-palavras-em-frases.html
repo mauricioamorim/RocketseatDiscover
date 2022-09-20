@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrando palavras em textos</title>
+</head>
+<body>
+    <script>
+        let phrase = "Dúvido vc achar alguma cor nessa variável que não está em branca";
+
+        // verifica se existe a palavra "branca" no texto
+        console.log(phrase.includes('branca'))// true
+
+        // includes é case sensitive
+        console.log(phrase.includes('Branca'))// false
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius em fahrenheit</title>
+</head>
+<body>
+    <h1>Celsius em fahrenheit</h1>
+    <p>
+        Crie uma função que receba uma string em celsius ou fahrenheit e faça a transformação de uma unidade para outra <br>
+        C = (F-32) * 5*9<br>
+        F = C * 9/5 + 32<br>
+    </p>
+    <script>
+        function celsiusToFahrenheit(celsiusDegree) {
+            if(typeof celsiusDegree == "number"){
+                return celsiusDegree * 9/5 + 32;
+            }
+            throw new Error(`Grau Celsius não identificado!`);
+        }
+
+        function fahrenheitToCelsius(fahrenheitDegree) {
+            if(typeof fahrenheitDegree == "number"){
+                return (fahrenheitDegree-32) * 5/9;
+            }
+            throw new Error(`Grau Fahrenheit não identificado!`);
+        }
+
+        function convertDegreeTemperature(degree) {
+            const isCelsius = typeof degree == "string" && degree.toUpperCase().includes('C');
+            const isFahrenheit = typeof degree == "string" && degree.toUpperCase().includes('F');
+            const onlyDegreeNumbers = Number(degree.toUpperCase().replaceAll('º', "").replaceAll('F', "").replaceAll('C', "")); 
+            
+            if(!isFahrenheit && isCelsius){
+                return `A conversão de ${degree} para Fahrenheit são: ${celsiusToFahrenheit(onlyDegreeNumbers)}º F`;
+            }else if(!isCelsius && isFahrenheit){
+                return `A conversão de ${degree} para Celsius são: ${fahrenheitToCelsius(onlyDegreeNumbers)}º C`;
+            } else {
+                throw new Error(`Grau não identificado!`);
+            }
+        }
+
+        try {
+            console.log(convertDegreeTemperature('32º C'))
+            console.log(convertDegreeTemperature('89.6º F'))
+            console.log(convertDegreeTemperature('89.6º F C'))
+        } catch (error) {
+            console.log(error.message);
+        }
+    </script>
+</body>
+</html>

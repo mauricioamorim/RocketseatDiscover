@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <script>
+        // for
+        // Usa-se quando vc sabe em que momento o código tem que parar
+        for (let i = 0; i < 5; i++) {
+            if(i === 2){
+                break
+            }
+            if(i === 2){
+                continue
+            }
+            console.log(`i ainda é menor que 5`)
+        }
+
+
+
+
+
+        // for...of
+        let name = 'Mauricio';
+        let names = ['João', 'Paulo', 'Pedro']
+
+        // passa letra por letra da variavel nome
+        for(let char of name){
+            console.log(char)// exibe uma letra
+        }
+
+        // percorre nome por nome do array de nomes
+        for(let name of names){
+            console.log(name)// exibe um nome
+        }
+
+
+
+
+
+        // for...in
+        // Serve para percorrer propriedades de um objeto
+        let person = {
+            name: 'Mauricio',
+            age: 39,
+            weight: 69.6,
+
+        }
+
+        // percorre propriedade por propriedade do objeto
+        for(let property in person){
+            console.log(property)// exibe uma propriedade
+        }
+    </script>
+</body>
+</html>

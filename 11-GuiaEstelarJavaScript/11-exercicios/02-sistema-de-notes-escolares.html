@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformar notas escolares</title>
+</head>
+<body>  
+    <h1>Transformar notas escolares</h1>
+    <p>Crie um algorismo que transforme as notas do sistema númerico para sistema de notas em caracteres tipo A, B, C, D e E</p>
+    <ul>
+        <li>de 90 para cima = A</li>
+        <li>entre 89 - 80 = B</li>
+        <li>entre 79 - 70 = C</li>
+        <li>entre 69 - 60 = D</li>
+        <li>menor que 60 = E</li>
+    </ul>
+
+    <script>
+        function converteNotasNumericasParaString(score) {
+            let noteA = score <= 100 && score >= 90;
+            let noteB = score <= 89 && score >= 80;
+            let noteC = score <= 79 && score >= 70;
+            let noteD = score <= 69 && score >= 60;
+            let noteE = score <= 59 && score >= 0;
+
+            let note;
+            
+            if( noteA ) {
+                note = "A";
+            } else if( noteB ){
+                note = "B";
+            } else if( noteC ){
+                note = "C";
+            } else if( noteD ){
+                note = "D";
+            } else if( noteE ){
+                note = "E";
+            } else {
+                return `Nota númerica '${score}' inválida`;
+            }
+
+            return `A nota númerica '${score}' corresponde a '${note}'`;
+        }
+        console.log(converteNotasNumericasParaString(100))
+        console.log(converteNotasNumericasParaString(99))
+        console.log(converteNotasNumericasParaString(90))
+        console.log(converteNotasNumericasParaString(89))
+        console.log(converteNotasNumericasParaString(80))
+        console.log(converteNotasNumericasParaString(79))
+        console.log(converteNotasNumericasParaString(70))
+        console.log(converteNotasNumericasParaString(69))
+        console.log(converteNotasNumericasParaString(60))
+        console.log(converteNotasNumericasParaString(59))
+        console.log(converteNotasNumericasParaString(0))
+        console.log(converteNotasNumericasParaString(-1))
+        console.log(converteNotasNumericasParaString(101))
+        console.log(converteNotasNumericasParaString("123"))
+        console.log(converteNotasNumericasParaString(""))
+    </script>
+</body>
+</html>

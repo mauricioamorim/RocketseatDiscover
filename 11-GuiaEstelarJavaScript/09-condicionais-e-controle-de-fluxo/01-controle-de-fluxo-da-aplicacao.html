@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de fluxo da aplicação</title>
+</head>
+<body>
+    <script>
+        // Control flow
+
+
+
+        // if...else
+        let temperature = 36.5;
+
+        // Recomenda-se que coloque as condicionais em variaveis
+        let highTemperature = temperature >= 37.5;
+        let mediumTemperature = temperature <= 37.5 && temperature >= 37;
+
+
+        if(highTemperature) {
+            console.log('febre moderada')
+        } else if(mediumTemperature) {
+            console.log('febre moderada')
+        } else {
+            console.log('saudável')
+        }
+
+        // switch
+        function calculate(number1, operator, number2){
+            let result;
+            switch (expression) {
+                case '+':
+                    result = number1+number2;
+                    break;
+                case '-':
+                    cresult = number1+number2;
+                    break;
+                default:
+                    console.log("Não implementado");
+                    break;
+            }
+
+            return result;
+        }
+
+        // throw 
+        function sayMyName(name) {
+            if(name === ""){
+                throw new Error("Nome é obrigatório");
+                // se der erro ele já não lê mais pra baixo, ele sai da função
+            }
+            console.log("depois do erro")
+        }
+
+        // try...catch
+        try {
+            sayMyName('');
+        } catch (e) {
+            console.log(e)
+        }
+    </script>
+</body>
+</html>

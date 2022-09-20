@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de gastos familiar</title>
+</head>
+<body>
+    <h1>Sistema de gastos familiar</h1>
+    <p>
+        Crie um projeto que possuirá 2 propriedades, ambas do tipo array: <br>
+        income(receitas): [] <br>
+        expense(despesas): []
+    </p>
+    <p>
+        Depois, crie uma função que irá calcular o total de receitas e despesas e irá mostrar uma mensagem
+        se a família está com saldo positivo ou negativo, seguido do valor do saldo
+    </p>
+
+    <script>
+        let family = {
+            incomes: [220.00, 10, 0.57, 0.30, '20', '10,30', 'A'],
+            expenses: [160, 150.35]
+        }
+
+        function sum(array){
+            let total = 0;
+            if(Array.isArray(array)){
+                array.map((value)=>{
+                    if(typeof value == "number"){
+                        total += value;
+                    } else {
+                        console.log(`O valor ${value} é inválido`)
+                    }
+                })
+            }
+            return total;
+        }
+
+        function balanceCalculator(family) {
+            const totalIncomes = sum(family.incomes);
+            const totalExpenses = sum(family.expenses);
+
+            const balance = totalIncomes-totalExpenses;
+            const haveCredit = balance>0;
+
+            let balanceText = "negativo";
+            if(haveCredit){
+                balanceText = "positivo"
+            } 
+            return console.log(`Seu saldo é de R$ ${balance.toFixed(2)} ${balanceText}`);
+        }
+
+        balanceCalculator(family);
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscando e contando dados em Arrays</title>
+</head>
+<body>
+    <h1>Buscando e contando dados em Arrays</h1>
+    <p>Baseado no Array de Livros por Categoria abaixo, faça os seguintes desafios</p>
+    <ul>
+        <li>Contar o número de categorias e o número de livros em cada categoria</li>
+        <li>Contar o número de autores</li>
+        <li>Mostrar livros do autor Augusto Cury</li>
+        <li>Transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor</li>
+    </ul>
+    <script>
+        const booksByCategory = [
+            {
+                category: "Riqueza",
+                books: [
+                    {
+                        title: "Os segredos da mente milionária",
+                        author: "T. Harv Eker"
+                    }, 
+                    {
+                        title: "O homem mais rico da Babilônia",
+                        author: "George S. Clason"
+                    }, 
+                    {
+                        title: "Pai rico, pai pobre",
+                        author: "Robert T. Kiyosaki e Sharon L. Lechter"
+                    }
+                ]
+            },
+            {
+                category: "Inteligência Emocional",
+                books: [
+                    {
+                        title: "Você é Insubstituível",
+                        author: "Augusto Cury"
+                    }, 
+                    {
+                        title: "Ansiedade - Como enfrentar o mal do século",
+                        author: "Augusto Cury"
+                    },
+                    {
+                        title: "Os 7 hábitos das pessoas altamente eficazes",
+                        author: "Stephen R. Covey"
+                    },
+                ]
+            }
+        ]
+
+      
+        const totalCategories = booksByCategory.length;
+        console.log(`Existem ${totalCategories} categorias`);
+
+        booksByCategory.map((category)=>{
+            console.log(`A categoria ${category.category} tem ${category.books.length} livros`)
+        })
+
+        function countAuthors() {
+            let authors = [];
+
+            for(let category of booksByCategory){
+                for(let book of category.books){
+                    //lembrando q indexOf retorna o index do array, se não existir retorna -1
+                    if(authors.indexOf(book.author) == -1){
+                        authors.push(book.author)
+                    }
+                }
+            }
+            return authors.length;
+        }
+        console.log(`Existem ${countAuthors()} autores`);
+
+        function booksOfAuthor(author) {
+            let books = [];
+            booksByCategory.map((category)=>{
+                category.books.map((book)=>{
+                    if(book.author.toUpperCase() === author.toUpperCase()){
+                        books.push(book.title);
+                    }
+                })
+            });
+            return books.join(", ")
+        }
+        console.log('Livros do autor:', booksOfAuthor("Augusto Cury"))
+        
+    </script>
+</body>
+</html>
