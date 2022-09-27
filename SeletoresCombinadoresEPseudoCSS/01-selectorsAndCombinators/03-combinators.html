@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+
+</head>
+<body>
+    <main>
+        <h1>Combunators</h1>
+        <p>
+            Combinadores, pois eles trabalham para buscar e combinar seletores a fim de aplicar uma estilização
+        </p>
+
+        <h2>Descendant combinator</h2>
+        <ul>
+            <li>Identificado por um espaço <code>&nbsp;</code> entre os seletores</li>
+            <li>Busca um elemento dentro de outro</li>
+        </ul>
+        <style>
+            /* Descendant combinator */
+            body li code{
+                background-color: crimson;
+            }
+        </style>
+
+        <h2>Child combinator</h2>
+        <ul>
+            <li>Identificado pelo sinal <code>></code> entre dois seletores</li>
+            <li>Seleciona somente o elemento que é filho direto do elemento referenciado</li>
+            <li>Elementos depois do filho direto serão desconsiderados</li>
+            <ul>
+                <li>FIca sem <code>padding-bottom</code> css pois o descendent pega só o filho direto</li>
+                <li>FIca sem <code>padding-bottom</code> css pois o descendent pega só o filho direto</li>
+            </ul>
+        </ul>
+        <style>
+            /* Descendant combinator */
+            main > ul > li {
+                padding-bottom: 15px;
+            }
+        </style>
+
+        <h2>Adjacent sibling combinator</h2>
+        <ul>
+            <li id="adjacent-sibling">Identificado pelo sinal <code>+</code> entre dois seletores</li>
+            <li>Seleciona somente o elemento do lado direto que é irmão direto na hierarquia do elemento referenciado</li>
+            <li>sem CSS por não ser o primeiro elemento ao irmão do <code>h2</code></li>
+        </ul>
+        <style>
+            /* Adjacent sibling combinator */
+            #adjacent-sibling + li {
+                background-color: blue;
+            }
+        </style>
+
+        <h2>General sibling combinator</h2>
+        <ul>
+            <li id="general-sibling">Identificado pelo sinal <code>~</code> entre dois seletores</li>
+            <li>Seleciona todos os elementos irmãos do elemento referenciado</li>
+            <li class="red">css é aplicado nesse elemento tambem</li>
+        </ul>
+        <ul>
+        </ul>
+        <style>
+            /* General sibling combinator */
+            #general-sibling ~ li {
+                color: aqua;
+            }
+        </style>
+
+
+        <h2>Utilizando combinadores</h2>
+        <style>
+            /* não funcionou */
+            ul > li[class="red"] {
+                color: red;
+            }
+        </style>
+
+        <h2>Dica</h2>
+        <ul>
+            <li>Seletores muito específicos tendem a causar dificuldades no reuso das regras de estilização dos elementos</li>
+            <li>Muitas vezes, um simples uso de classes, torna o trabalho mais eficiente</li>
+        </ul>
+    </main>
+</body>
+</html>

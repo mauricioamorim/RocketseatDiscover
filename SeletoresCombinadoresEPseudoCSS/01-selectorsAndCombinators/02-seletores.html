@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* seletor geral */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Element Selector */
+        h1 {
+           font-style: italic;
+        }
+
+        /* ID Selector */
+        #texto-seletores {
+            color: blueviolet;
+        }
+
+        /* Class Selector */
+        .azul {
+            color: blue;
+        }
+
+        /* Attribute Selector */
+        [id] {
+            background-color: yellow;
+        }
+
+        /* Pseudo-class Selector */
+        p:hover {
+            color: red;
+        }
+
+        /* Multiplo Seletor */
+        h1, p, a{
+            padding-top: 10px;
+        }
+    </style>
+    <title>Seletores</title>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <h1 class="azul">Seletores</h1>
+        <p id="texto-seletores">
+            Conecta um elemento HTML com o CSS a fim de alterar o elemento.
+        </p>
+
+        <h2 class="azul">Tipos</h2>
+        <dl>
+            <dt>Element Selector</dt>
+            <dd>- Todos os elementos HTML</dd>
+
+            <dt>ID Selector</dt>
+            <dd>
+                - Um elemento que tenha um atributo 'id' <br>
+                - Cada 'id' deverá ser único
+            </dd>
+
+            <dt>Class Selector</dt>
+            <dd>
+                - Os elementos que contenha um atributo 'class' <br>
+                - Podemos ter uma ou mais classes
+            </dd>
+
+            <dt>- Attribute Selector</dt>
+            <dd>- Um elemento que tenha um atributo específico.</dd>
+
+            <dt>- Pseudo-class Selector</dt>
+            <dd>- Elementos em um ESTADO específico</dd>
+        </dd>
+
+        <h2>Múltiplos</h2>
+        <p>
+            Você poderá selecionar múltiplos elementos a aplicar alguma regra
+            css para todos eles. <br>
+            Usamos uma separação por vírgulas para isso.
+        </p>
+    </main>
+</body>
+</html>
