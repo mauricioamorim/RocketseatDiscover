@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+</head>
+<body>
+    <main>
+        <h2>Selecionando elementos com pseudo-classes</h2>
+        <ul>
+            <li><code>:first-child</code></li>
+            <li><code>:nth-of-type()</code></li>
+            <li><code>:nth-child()</code></li>
+        </ul>
+
+        <article>
+            <h3>first-child</h3> 
+            <p>Funciona somente no primeiro elemento especificado</p>
+            <p>Se o elemento especificado for o segundo filho não irá aplicar o css</p>
+            <style>
+                .first-child li:first-child {
+                    font-weight: bold;
+                    color: blueviolet ;
+                }
+            </style>
+            <ul class="first-child">
+                <!-- 
+                    <h4>
+                        Se descomentar o 'li:first-child' vai parar de funcionar
+                        Aqui só deveria ter "li" dentro do ul
+                    </h4> 
+                -->
+                <li>Gratidão</li>
+                <li>Esperança</li>
+                <li>Sabedoria</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>nth-of-type()</h3> 
+            <p>Funciona somente no elemento filho de acordo com a ordem passada e mesmo tipo setado</p>
+            <style>
+                .nth-of-type li:nth-of-type(2) {
+                    font-weight: bold;
+                    color: blueviolet ;
+                }
+            </style>
+            <ul class="nth-of-type">
+                <li>Gratidão</li>
+                <li>Esperança</li>
+                <li>Sabedoria</li>
+            </ul>
+        </article>
+
+
+        <article>
+            <h3>nth-child()</h3> 
+            <p>
+                Seleciona o elemento de acordo com a ordem passada e indiferente se existem outros tipos de elementos antes dele.
+                Mas a ordem tem que bater com o tipo de elemento selecionado
+            </p>
+            <style>
+                .nth-child p:nth-child(2) {
+                    font-weight: bold;
+                    color: blueviolet ;
+                }
+            </style>
+            <div class="nth-child">
+                <h4>Se descomentar o 'li:first-child' vai parar de funcionar</h4>
+                <p>Gratidão</p>
+                <p>Esperança</p>
+                <p>Sabedoria</p>
+            </div>
+        </article>
+
+
+        <article>
+            <h3>nth-child(even/par ou odd/impar)</h3> 
+            <p>
+                Seleciona os elementos pares ou impares conforme os atributos passados
+            </p>
+            <style>
+                .nth-child li:nth-child(odd) {
+                    font-weight: bold;
+                    color: blueviolet ;
+                }
+            </style>
+            <ul class="nth-child">
+                <li>Gratidão</li>
+                <li>Esperança</li>
+                <li>Sabedoria</li>
+                <li>Perseverança</li>
+            </ul>
+        </article>
+    </main>
+</body>
+</html>

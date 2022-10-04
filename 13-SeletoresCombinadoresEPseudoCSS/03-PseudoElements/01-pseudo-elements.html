@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements</title>
+    <style>
+        li {
+            position: relative;
+            padding-top: 25px;
+        }
+        .before li::before{
+            content: "< "
+        }
+        .after li::after{
+            content: " >";
+            width: 10px;
+            height: 1px;
+            background-color: blue;
+            position: absolute;
+            bottom: 0px;
+        }
+        /** repare que só a primeira linha tem cor diferente */
+        p:nth-of-type(2)::first-line {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Pseudo-elemens</h1>
+        <p>
+            Com pseudo-elements nós podemos adicionar elementos HTML pelo própio CSS <br>
+            "::pseudo-element-name"
+        </p>
+        <p>
+            Depois para ver como somente essa linha da página ficou de cor marrom <br>
+            veja o css no código fonte
+        </p>
+
+        <h2>Exemplos</h2>
+        <ul class="before after">
+            <li><code>::before</code></li>
+            <li><code>::after</code></li>
+            <li><code>::first-line</code></li>
+        </ul>
+
+        <h3>Referência</h3>
+        <p><a href="https:developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Mozilla ORG</a></p>
+    </main>
+</body>
+</html>
