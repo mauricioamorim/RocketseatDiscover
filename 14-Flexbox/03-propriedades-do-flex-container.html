@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades do Flex Container</title>
+</head>
+<body>
+    <main>
+        <h1>Propriedades do Flex Container</h1>
+        <p>
+            Quando adicionamos o atributo "display: flex;" a um elemento ele automaticamente
+            ganha a possibilidade de usar as seguintes propriedades:
+        </p>
+
+        <aside>
+            <h2>flex-direction</h2>
+            <p>Direção dos itens do elemento</p>
+            <p>Flex é uma dimensão (horizontal e vertical)</p>
+            <p>Podemos mudar a direlção com "flex-direction"</p>
+            <p>valores: (row | row-reverse | column | column-reverse)</p>
+            <code>
+                <style>
+                    .direcao-dos-itens {
+                        display: flex;
+                        flex-direction: column-reverse; /* exibe os elementos internos em coluna de baixo para cima */
+                        height: 80vh;
+                    }
+                </style>
+                <div class="direcao-dos-itens">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                </div>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>flex-wrap</h2>
+            <p>Multi linhas</p>
+            <p>Podemos usar multi linhas</p>
+            <p>Cada nova linha, um novo flex container(elemento)</p>
+            <code>
+                <style>
+                    .multi-linhas {
+                        display: flex;/* faz com que os elementos sejam exibidos um ao lado do outro */
+                        flex-wrap: wrap;/* cria uma nova linha caso os elementos não caibam em uma só */
+                        justify-content: center;/* alinha todos os itens em todas as linhas ao centro */
+                        border: 1px dashed solid;
+                    }
+                    .multi-linhas div{
+                        border: 1px solid;
+                        width: 400px;
+                    }
+                </style>
+                <div class="multi-linhas">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                </div>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>flex-flow</h2>
+            <p>É um shorthand para usar as propriedades flex-direction e flex-wrap em apenas uma</p>
+            <code>
+                <style>
+                    .flex-flow {
+                        display: flex;/* faz com que os elementos sejam exibidos um ao lado do outro */
+                        /*flex-wrap: wrap; cria uma nova linha caso os elementos não caibam em uma só */
+                        /*justify-content: center; alinhas todos os itens em todas as linhas ao centro */
+                        flex-flow: column-reverse wrap;
+                        border: 1px dashed solid;
+                    }
+                    .flex-flow div{
+                        border: 1px solid;
+                        width: 400px;
+                    }
+                </style>
+                <div class="flex-flow">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                </div>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>justify-content</h2>
+            <p>Alinhamento no eixo principal dos elementos dentro do container</p>
+            <h3>Valores:</h3>
+            <ul>
+                <li>flex-start(padrão)</li>
+                <li>flex-end</li>
+                <li>center</li>
+                <li>
+                    space-around(espacamento em volta, 
+                    incluindo laterais internas do container
+                </li>
+                <li>
+                    space-between(entre), 
+                    não inclui espacamento nas laterais internas do container
+                </li>
+                <li>
+                    space-evenly(constante), mantem o espaçamento por igual entre os elementos. 
+                    Incluindo nas laterais internas do container
+                </li>
+            </ul>
+            <code>
+                <style>
+                    .justify-content {
+                        display: flex;/* faz com que os elementos sejam exibidos um ao lado do outro */
+                        justify-content: space-evenly;
+                        border: 1px dashed solid;
+                    }
+                    .justify-content div{
+                        border: 1px solid;
+                    }
+                </style>
+                <div class="justify-content">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                </div>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>align-items</h2>
+            <p>Alinhamento no eixo cruzado dos elementos dentro do container</p>
+            <h3>Valores:</h3>
+            <ul>
+                <li>stretch(padrão) -> estica no eixo cruzado</li>
+                <li>flex-start -> no começo</li>
+                <li>flex-end -> no fim</li>
+                <li>center -> ao centro</li>
+            </ul>
+            <code>
+                <style>
+                    .align-items {
+                        display: flex;/* faz com que os elementos sejam exibidos um ao lado do outro */
+                        align-items: center;
+                        border: 1px dashed solid;
+                    }
+                    .align-items div{
+                        border: 1px solid;
+                    }
+                </style>
+                <div class="align-items">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                </div>
+            </code>
+        </aside>
+        <aside>
+            <h2>gap</h2>
+            <p>Espaço de um dos lados do elemento</p>
+            <h3>Valores:</h3>
+            <ul>
+                <li>Unidades de medidas</li>
+                <li>fixas: px, pt</li>
+                <li>flexíveis: %, em, rem</li>
+            </ul>
+            <code>
+                <style>
+                    .gap {
+                        display: flex;/* faz com que os elementos sejam exibidos um ao lado do outro */
+                        border: 1px dashed solid;
+                        gap: 5px;
+                    }
+                    .gap div{
+                        border: 1px solid;
+                    }
+                </style>
+                <div class="gap">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                </div>
+            </code>
+        </aside>
+    </main>
+</body>
+</html>

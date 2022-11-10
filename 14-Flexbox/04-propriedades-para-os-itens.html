@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades para os itens</title>
+</head>
+<body>
+    <main>
+        <h1>Propriedades para os itens</h1>
+        <p>Propriedades para os itens do container</p>
+
+        <aside>
+            <h2>flex-basis</h2>
+            <p>Faz a largura dos elementos na direção em que estiver o exio principal(flex-direction).</p>
+            <code>
+                <style>
+                    .flex-basis {
+                        display: flex;
+                        flex-direction: column;
+                        border: 1px dashed red;
+                    }
+
+                    .flex-basis div {
+                        border: 1px solid;
+                        flex-basis: 15px;
+                        /* flex-basis: auto; */
+                    }
+
+                    .flex-basis div:nth-child(1) {
+                        height: 25%;/*só vai funcionar se o flex-basis estiver no auto*/
+                    }
+                </style>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>flex-grow</h2>
+            <p>O crescimento do item dentro do container em relação aos espaços vazios.</p>
+            <p>Divide o espaço vazio em todos os elementos q tiverem esse atributo </p>
+            <code>
+                <style>
+                    .flex-grow {
+                        display: flex;
+                        border: 1px dashed red;
+                    }
+
+                    .flex-grow div {
+                        border: 1px solid;
+                    }
+
+                    .flex-grow div:nth-child(3) {
+                        flex-grow: 0;/* padrão */
+                        flex-grow: 1;/* fração que vc quer q ele ocupe do espaço vaizo*/
+                    }
+                </style>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>flex-shrink</h2>
+            <p>Encolhe o item dentro do conteiner</p>
+            <code>
+                <style>
+                    .flex-shrink {
+                        display: flex;
+                        border: 1px dashed red;
+                    }
+
+                    .flex-shrink div {
+                        flex-basis: 100%;
+                        border: 1px solid;
+                    }
+
+                    .flex-shrink div:nth-child(2){
+                        flex-shrink: 0; /* não diminue mais */
+                        flex-shrink: 2; /* diminue em proporcão do exio principal */
+                    }
+                </style>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>shorthand</h2>
+            <p>Atalho para flex-grow, flex-shirink e flex-basis</p>
+            <p>pode ter 1 (grow), 2(shirink) ou 3(basis) valores</p>
+            <code>
+                <style>
+                    .shorthand {
+                        display: flex;
+                        border: 1px dashed red;
+                    }
+
+                    .shorthand div {
+                        flex: 1;
+                        border: 1px solid;
+                    }
+                </style>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>Alterando tamanho de multiplos itens</h2>
+            <code>
+                <style>
+                    .page {
+                        display: flex;
+                        min-height: 100vw;
+                    }
+                    .page aside:nth-child(1){
+                        flex: 1;
+                        background-color: lightgreen;
+                    }
+                    .page main:nth-child(2){
+                        flex: 2;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: lightblue;
+                    }
+                    .page main section {
+                        width: 75%;
+                    }
+                    .page main section:nth-child(1) {
+                        background-color: lightyellow;
+                        flex:2;
+                    }
+                    .page main section:nth-child(2) {
+                        background-color: lightsalmon;
+                        flex:0 80px;
+                    }
+                    .page main section:nth-child(3) {
+                        background-color: pink;
+                        flex:1;
+                    }
+                </style>
+
+                <div class="page">
+                    <aside>Aside</aside>
+                    <main>
+                        Main
+                    <section>Content 1</section>
+                    <section>Content 2</section>
+                    <section>Content 3</section>
+                    </main>
+                </div>
+            </code>
+        </aside>
+
+
+        <aside>
+            <h2>Ordenado Itens</h2>
+            <p>Propriedade que serve para ordenar os elementos dentro de uma caixa</p>
+
+            <code>
+                <style>
+                    .order {
+                        display: flex;
+                        border: 1px dashed red;
+                    }
+
+                    .order div {
+                        flex: 1;
+                        border: 1px solid;
+                    }
+
+                    .order div:nth-child(1) {
+                        order: 0;/* o padrão é 0 */
+                    }
+                    .order div:nth-child(2) {
+                        order: 1;
+                    }
+                    .order div:nth-child(3) {
+                        order: 2;
+                    }
+                    .order div:nth-child(4) {
+                        order: 3;
+                    }
+
+                </style>
+            </code>
+        </aside>
+
+    </main>
+</body>
+</html>

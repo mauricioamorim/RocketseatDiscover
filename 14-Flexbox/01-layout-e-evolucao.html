@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Layouts e evlução</h1>
+        <p>Layout tem a ver com a maneira que os elementos estão distribuidos na tela</p>
+
+        <aside>
+            <h2>Normal Flow</h2>
+            <p>Ou Flow Layout é a maneira que os elamentos "block" e "inline' ficam na página</p>
+            <code>
+                <p>Texto block(com quebra delinha) com <strong>inline</strong> dentro</p>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>Tableless</h2>
+            <p>
+                É a maneira de tabelas onde a tag "table" recebe um display "table" 
+                fazendo com que os elementos internos com "td" e "tr" possam ser
+                usados para montar uma tabela
+            </p>
+            <code>
+                <table>
+                    <tr style="display: block;">
+                        <td style="display: inline;">Hora</td>
+                        <td style="display: inline;">16:20</td>
+                    </tr>
+                    <tr style="display: block;">
+                        <td style="display: inline;">Hora</td>
+                        <td style="display: inline;">4:20</td>
+                    </tr>
+                </table>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>Tabless</h2>
+            <p>Uso das propriedades "float", "clear" para que os elementos possam mudar de posição na tela</p>
+            <code>
+                <div style="float: left;">esquerda</div>
+                <div style="float: right;">direita</div>
+                <div style="clear: both;">normal</div>
+            </code>
+        </aside>
+
+        <aside>
+            <h2>Flexbox</h2>
+            <p>A caixa se torno flex(maleavel), fazendo com que os elementos internos possam receber melhor:</p>
+            <ul>
+                <li>Alinhamento</li>
+                <li>Ordenação</li>
+                <li>Tamanhos flexíveis</li>
+            </ul>
+            <code>
+                <style>
+                    .flexbox {
+                        display: flex;/* Fica um elemento ao lado do outro */
+                        justify-content: space-around;/* Da um espacamento igual entre os elementos */
+                    }
+                </style>
+                <div>
+                    <div>Sem flex</div>
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                </div>
+                <div class="flexbox">
+                    <div>Com flex</div>
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                </div>
+            </code>
+        </aside>
+    </main>
+</body>
+</html>

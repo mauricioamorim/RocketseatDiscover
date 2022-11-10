@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminologia</title>
+</head>
+<body>
+    <main>
+        <h1>Terminologia</h1>
+        <p>Termos mais conmuns no mundo do flexbox</p>
+
+        <aside>
+            <h2>Conceito de Nesting</h2>
+            <p>Sempre que existir um elemto dentro de outro elemento, estaremos falando do conceito de Nesting</p>
+        </aside>
+
+        <aside>
+            <h2>Flex Container</h2>
+            <p>É algo que contem. Imagine uma caixa que contem elemntos dentro</p>
+
+            <h3>Flex Item</h3>
+            <p>Elementos que pertencem a um container</p>
+            <code>
+                <div class="container1">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </code> 
+        </aside>
+
+        <aside>
+            <h2>Axis</h2>
+            <p>Axis significa eixos</p>
+
+            <h3>main</h3>
+            <p>eixo principal</p>
+
+            <h3>cross</h3>
+            <p>eixo que cruza o eixo principal</p>
+            <code>
+                <style>
+                    .container2 {
+                        display: flex;
+                        flex-direction: column;/* muda o exio para cross */
+                        justify-content: flex-end;/* alinha os itens no final da coluna */
+                        height: 100vh; /* faz com que a coluna tenha a mesma altura da janela do navegador */
+                    }
+                </style>
+                <div class="container2">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                </div>
+            </code> 
+        </aside>
+
+        <aside>
+            <h2>Flex sizing</h2>
+            <p>
+                Permite que o elemento seja flexível
+                alterando o width e height dos itens para preenchimento dos espaços do flex container
+            </p>
+            <code>
+                <style>
+                    .container3 {
+                        display: flex;
+                        border: 1px solid red;
+                        height: 80vh;
+                    }
+                    .item {
+                        background-color: gray;
+                        border: 1px solid;
+                        flex: 1; /* aumenta a altura e largura dos itens até que todo container seja preenchido */
+                    }
+                </style>
+                <div class="container3">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                </div>
+            </code> 
+        </aside>
+    </main>
+</body>
+</html>
