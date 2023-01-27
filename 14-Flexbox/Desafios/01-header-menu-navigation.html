@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Navigation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            display: flex;/* faz com que os elementos sejam exibidos um ao lado do outro */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 2rem;
+            align-items: center;
+            background-color: lightgrey;
+        }
+        
+        nav a:nth-child(1){
+            background-color: darkorange;
+        }
+
+        nav ul:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+            gap: .8rem;
+            align-items: center;
+            list-style: none;
+            background-color: limegreen;
+        }
+
+        nav ul li {
+            text-transform: uppercase;
+            background-color: blueviolet;
+        }
+
+        nav ul li:last-child{
+            background-color: blue;
+            border-radius: .2rem;
+            color: orange;
+            padding: .8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=""><img src="" alt="Logo"></a>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Testimonials</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

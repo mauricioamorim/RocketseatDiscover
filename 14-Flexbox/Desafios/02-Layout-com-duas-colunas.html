@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com duas colunas.</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .flex-colunas {
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: aquamarine;
+            min-height: 100vh;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .flex-colunas aside:nth-child(2){
+            flex: 0 25%;
+            background-color: burlywood;
+        }
+        .flex-colunas main:nth-child(1){
+            flex: 1;
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-colunas">
+        <main></main>
+        <aside></aside>
+    </div>
+</body>
+</html>

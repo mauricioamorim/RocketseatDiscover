@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando Estilos e Classes</title>
+</head>
+<body>
+  <header>Manipulando Estilos e Classes</header>
+  <main>
+    <h1>Como manipular estilo e classe do DOM</h1>
+    <p>Aqui vc vai ver algumas maneiras de manipular o estilo e classes HTML através do DOM JS</p>
+    
+    <aside>
+      <h2>Style</h2>
+      <p>Atribiu ou pega o valor de estilos do HTML</p>
+      <code>
+        <script>
+          const element1 = document.querySelectior('body');
+          element.style.backgroundColor = "blue";
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>classList</h2>
+      <p>Adiciona ou remove classes ao elemento</p>
+      <code>
+        <script>
+          const element2 = document.querySelectior('h2')[1];
+          element.classList.add("newCssClass");
+          element.classList.remove("newCssClass");
+          element.classList.toggle("newCssClass");//se a classe existir ele tira, se não, ele adiciona
+        </script>
+      </code>
+    </aside>
+  </main>
+</body>
+</html>

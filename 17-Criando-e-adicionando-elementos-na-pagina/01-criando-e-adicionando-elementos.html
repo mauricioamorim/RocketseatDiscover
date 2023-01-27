@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criando e adicionando elementos na página</title>
+</head>
+<body>
+  <header>
+    Criando e adicionando elementos na página
+  </header>
+  <main>
+    <h1>Meu Blog</h1>
+    
+    <h2>createElement</h2>
+    <p>Cria um elemento HTML</p>
+    <code>
+      <script>
+        const div = document.createElement('div');
+        div.innerText = 'Olá Devs!';
+        const body = document.querySelector('body');
+      </script>
+    </code>
+
+    <h2>prepend</h2>
+    <p>Adiciona o elemento HTML antes do primeiro filho.</p>
+    <code>
+      <script>
+        const divPrepend = document.createElement('div');
+        divPrepend.innerText = 'Olá Devs! prepend antes do primeiro filho';
+        body.prepend(divPrepend);
+      </script>
+    </code>
+
+    <h2>insertBefore</h2>
+    <p>Adiciona o elemento HTML antes de um filho especifico.</p>
+    <code>
+      <script>
+        const insertBefore = document.createElement('div');
+        insertBefore.innerText = 'Olá Devs! insertBefore h2';
+        const main = body.querySelector('main');
+        const h2 = main.querySelector('h2:first-of-type');
+        //priveiro parametro é o elemento a ser inserido
+        //segundo paramentro é a referencia do elemento anterior q o atual será inseriodo
+        main.insertBefore(insertBefore, h2);
+
+        // é possível fazer um esquema para inserir depois de um elemento tambem,
+        // para isso basta fazer esse esquema
+        const insertAfter = document.createElement('div');
+        insertAfter.innerText = 'Olá Devs! "insertAfter" h2';
+        main.insertBefore(insertAfter, h2.nextSibling);
+      </script>
+    </code>
+
+    <h2>append</h2>
+    <p>Adiciona o elemento HTML depois do ultimo filho.</p>
+    <code>
+      <script>
+        const divAppend = document.createElement('div');
+        divAppend.innerText = 'Olá Devs! append depois do ultimo filho';
+        body.append(divAppend);
+      </script>
+    </code>
+  </main>
+  <footer>
+    @2021
+  </footer>
+</body>
+</html>

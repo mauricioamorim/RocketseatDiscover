@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navegando pelos elementos</title>
+</head>
+<body>
+  <header>
+    <h1>Navegando pelos elementos</h1>
+  </header>
+  <main>
+    <p>Veja como navegar pelos elementos</p>
+    <p>
+      IMPORTANTE observer que os metodos com "Element" (firstElementChild, nextElementSibling e etc) retornam somente os
+      elementos HTML que existem.
+      Já os metodos sem "Element" (firstChild, nextSibling e etc) retornam outras coisas como "text" quando 
+      ha uma quebra de linha em branca no código
+    </p>
+
+    <aside>
+      <h2>perentElement e parentNode</h2>
+      <p>navegação pelos elementos pais</p>
+      <dl>
+        <dt>parentNode</dt>
+        <dd>Retorna o nó pai</dd>
+
+        <dt>ParentElement</dt>
+        <dd>Retorna o elemento pai</dd>
+      </dl>
+      <code>
+        <script>
+          const body = document.querySelector('body');
+          console.log(body.parentNode);//<html>
+          console.log(body.parentElement);//<html>
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>childNodes, firstElementChild, lastElementChild</h2>
+      <p>navegação pelos elementos filhos</p>
+      <dl>
+        <dt>childNodes</dt>
+        <dd>Retorna um nodeList com elementos filhos(linhas em branco são consideradas como text)</dd>
+
+        <dt>firstElementChild</dt>
+        <dd>Retorna o primeiro elemento filho</dd>
+
+        <dt>lastElementChild</dt>
+        <dd>Retorna o ultimo elemento filho</dd>
+      </dl>
+      <code>
+        <script>
+          const body2 = document.querySelector('body');
+          console.log(body2.childNodes);//lista de nodes dos elementos filhos
+          console.log(body2.firstElementChild);//<header>
+          console.log(body2.lastElementChild);//<footer>
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>nextElementSibling e previousElementSibling</h2>
+      <p>navegação pelos elementos irmãos (Sibling significa irmão)</p>
+      <dl>
+        <dt>previousElementSibling</dt>
+        <dd>Retorna o elemento irmão anterior</dd>
+        
+        <dt>nextElementSibling</dt>
+        <dd>Retorna proximo elemento irmão</dd>
+      </dl>
+      <code>
+        <script>
+          const main = document.querySelector('main');
+          console.log(main.previousElementSibling);//<head>
+          const header = document.querySelector('header');
+          console.log(header.nextElementSibling);//<main>
+        </script>
+      </code>
+    </aside>
+  </main>
+  <footer>
+    @2023
+  </footer>
+</body>
+</html>

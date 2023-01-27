@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando Conteúdos</title>
+</head>
+<body>
+  <header>Manipulando Conteúdos</header>
+  <main>
+    <h1>Como manipular conteúdo do DOM</h1>
+    <p>Aqui vc vai ver algumas maneiras de manipular o contúdo HTML através do DOM</p>
+    <aside>
+      <h2>textContent</h2>
+      <p>altera o texto do conteúdo</p>
+      <p>Não permite colocar tags HTML</p>
+      <code>
+        <script>
+          const element1 = document.querySelectior('h2')[0];
+          element.textContent += "cancatenando ao título";
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>innerText</h2>
+      <p>Troca o texto interno do HTML</p>
+      <p>Não permite colocar tags HTML</p>
+      <code>
+        <script>
+          const element2 = document.querySelectior('h2')[1];
+          element.innerText = "novo ao título";
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>innerHTML</h2>
+      <p>Troca o conteúdo do elemento</p>
+      <p>Permite colocar tags HTML</p>
+      <code>
+        <script>
+          const element3 = document.querySelectior('h2')[2];
+          element.innerHTML = "<small>Novo título peueno</small>";
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>value</h2>
+      <p>altera o valor de um input</p>
+      <p>tambem pode ser usado para pegar o valor do input</p>
+      <code>
+        <script>
+          const element4 = document.querySelectior(':input');
+          element.value = "novo valor";
+        </script>
+      </code>
+    </aside>
+
+    <aside>
+      <h2>Atributos</h2>
+      <p>cria um atributo com valor</p>
+      <p>altera ou pega o valor de atributo do elemento</p>
+      <code>
+        <script>
+          const element5 = document.querySelectior('header');
+          element.setAttribute("id", "header");
+          element.getAttribute("id");
+        </script>
+      </code>
+    </aside>
+  </main>
+</body>
+</html>
