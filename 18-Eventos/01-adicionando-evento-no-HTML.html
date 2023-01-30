@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionando evento no HTML</title>
+  <script>
+    function print() {
+      console.log('print');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Adicioando evento pelo javascript</h1>
+  </header>
+  <main>
+    <p>Tudo que tem ação é um dispara um evento(click, rolagem, pressionar teclas e etc)</p>
+    <p>Eventos se iniciam logo após uma ação</p>
+
+    <h2 onclick="print()">Adicionando evento por tag HTML</h2>
+    <p> basta adicionar o atributo on[nome-do-evento] na tag HTML</p>
+
+    <h2>Adicionando evento pelo javascrit</h2>
+    <p>É possível adicionar o evento no JS pelo metodo addEventListener([nome-do-evento], callback)</p>
+    <code>
+      <script>
+        const h2 = document.querySelector('main h2:nth-child(2)');
+        //dessa maneira podemos adicionar multiplos eventos a serem disparados
+        h2.addEventListener("click", print);
+
+        /* dessa maneira ele sobreescreve o metodo tornando possível aprenas disparar um evento
+          input.onkeydown = function() {
+            console.log('tecla presionada');
+          } 
+        */
+      </script>
+    </code>
+
+    <h2>Argumernto Event</h2>
+    <p>Todo evento quando disparado passa como argumento o objeto Event</p>
+    <p>exitem categorias do objeto Event de acordo com o evento disparado</p>
+    <p>dentro do objeto é possível ter informações como: qual q tecla apertada, o código dela e etc.</p>
+    <form id="exemplo">
+      <fieldset form="exemplo" name="input">
+        <legend>exemplo</legend>
+        <label for="input-example">Input de exemplo</label>
+        <input type="text" id="input-example">
+      </fieldset>
+    </form>
+    <code>
+      <script>
+        const input = document.querySelector('#exemplo #input-example');
+        function print2(event) {
+          console.log(event);
+          console.log(event.key);
+          console.log(event.currentTarget);//quem disparou o evento
+          console.log(event.currentTarget.value);//valor do elemento que disparou o evento
+        }
+        input.addEventListener("keydown", print);
+      </script>
+    </code>
+  </main>
+</body>
+</html>
