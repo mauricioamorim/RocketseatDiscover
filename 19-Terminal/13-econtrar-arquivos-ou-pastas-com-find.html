@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquivos e Dieretórios</title>
+</head>
+<body>
+  <header>
+    Encontrar arquivos ou pastas com find
+  </header>
+  <main>
+    Nesta aula falaremos sobre o comando find, utilizado para encontrar pastas e arquivos, e sua sintaxe é:
+
+    find <caminho> arg [expression]
+    No caso, se deseja usar o finder no seu diretório atual, você pode usar um ponto (.), sendo assim, você substituiria o <path> pelo diretório que deseja
+
+    Já o arg, é o tipo de item que deseja encontrar, seja esse uma pasta ou um arquivo.
+
+    Usaremos para buscar um arquivo, então teremos que usar o arg -type e colocar a letra f, caso quiséssemos uma pasta, seria a letra d após o -type.
+
+    Também temos o argumento -name, que é o nome do arquivo ou pasta que desejamos, e caso quiséssemos que as letras pesquisadas sejam independentes de capitalização (maiúsculo, minúsculo), deve-se usar o argumento -inamepodendo também ser usado para buscar uma extensão específica de arquivo. Exemplo abaixo.
+
+    find . -type f -name "*.mp4"
+    Assim que fosse executado, esse comando exibiria todos os arquivos .mp4 no seu diretório atual.  </main>
+</body>
+</html>
