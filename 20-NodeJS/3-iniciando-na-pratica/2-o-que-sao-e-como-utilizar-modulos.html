@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que são e como utilizar módulos</title>
+</head>
+<body>
+  <header>O que são e como utilizar módulos?</header>
+  <main>
+    <h1>módulo path</h1>
+    <p>
+      <code>
+        <script>
+          //Atenção!
+          //Esse código para ser executado no node tem estar en um arquivo de js puro, sem html
+
+          //armazenando o módulo/objeto nativo do NodeJS path numa constante
+          const path = require('path');
+          //exibindo o objeto
+          console.log(path);
+          //exibindo o nome do arquivo onde o estará o código
+          //lembrando que o __filename é uma global 
+          console.log(path.basename(__filename));
+        </script>
+      </code>
+    </p>
+  </main>
+</body>
+</html>

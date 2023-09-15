@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criando e rodando scripts com npm</title>
+</head>
+<body>
+  <header>Criando e rodando scripts com npm</header>
+  <main>
+    <h1>npm run</h1>
+    <code>
+      {
+        "name": "NodeJS", //Não pode ter o mesmo nome no npm
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js", //o arquivo principal do pacote
+        "scripts": {
+          "dev": "node index.js",
+          "start": "node index.js",
+          "test": "echo \"Error: no test scpecified\" && exit 1"
+        },
+        "keywords": [
+         "aprendendo",
+         "nodejs"
+        ],
+        "author": "Mauricio Amorim",
+        "license": "ISC"
+      }
+    </code>
+    <p>
+      Como vc pode ver, dentro do package.json tem uma propriedade chamada "script" 
+      e dentro dela vc encontra a propriedade "start".
+    </p>
+    <p>Para rodar o script "index.js" basta vc digitar no terminal <code>npm run start</code></p>
+    <p>Obs. o termo "start", por ser uma palavra especial, não precisa ter o comando "run". Mas qualquer outro termo precisa</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciando versões das dependências</title>
+</head>
+<body>
+  <header>Gerenciando versões das dependências</header>
+  <main>
+    <h2>Aprendendo a ler o número de uma versão</h2>
+    <code>
+      "dependencies": {
+        "cfonts": "^2.9.1"// ^major.minor.patch
+      }
+    </code>
+    <dl>
+      <dt>*, ^, ~</dt>
+      <dd>
+        (*)Quando vem no começo, ao rodar "npm upgrade" ele vai atualizar o Major, Minor e Patch
+        (^)Quando vem no começo, ao rodar "npm upgrade" ele vai atualizar o Major e Patch
+        (~)Quando vem no começo, ao rodar "npm upgrade" ele vai atualizar somente o Patch
+        Quando não vem nada no começo, ele nunca atualiza.
+      </dd>
+
+      <dt>Major (2)</dt>
+      <dd>
+        Versão principal da dependência, só é alterado quando existe uma nova versão.
+        Se atualizar ou regredir pode ser que a dependência para de funcionar no projeto?
+        Quando é dado um "npm upgrade" ele NÂO atualiza essa versão.
+      </dd>
+
+      <dt>Minor (9)</dt>
+      <dd>
+        Quando a mesma versão tem uma melhoria, esse valor é atualizado
+      </dd>
+
+      <dt>Patch (1)</dt>
+      <dd>
+        Quando a versão arruma um pequeno bug, esse valor é atulaizado
+      </dd>
+    </dl>
+
+    <h2>npm outdated</h2>
+    <p>Esse comando mosta detalhes sobre a versão das dependências (current, wanted, latest e etc)</p>
+    <dl>
+      <dt>current</dt>
+      <dd>o número da versão atual (exemplo: 1.7.2)</dd>
+
+      <dt>wanted</dt>
+      <dd>o número da ultima atualização da mesma versão atual (exemplo: 1.7.5)</dd>
+
+      <dd>latest</dd>
+      <dd>a ultíma versão da dependência (exemplo: 2.29.1)</dd>
+    </dl>
+
+    <h2>npm upgrade</h2>
+    <p>Esse comando faz atualizar todas as dependências do projeto mantendo o "major" igual</p>
+    <p>caso vc queria atulizar uma unica dependência vc pode digitar <code>npm upgrade <nome-da-dependencia></code></p>
+
+    <h2>@latest</h2>
+    <p>
+      Caso sua versão no package.json não esteja com * e vc queria atualizar a dependência para a versão(Major, Minor e Patch) mais atual,
+      Sera necessário rodar o comando de instalção de dependência com o "@latest" no final.
+      Exemplo: <code>npm install cfonts@latest</code>
+    </p>
+  </main>
+</body>
+</html>

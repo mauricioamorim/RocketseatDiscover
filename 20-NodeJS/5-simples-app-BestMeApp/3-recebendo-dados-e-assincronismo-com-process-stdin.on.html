@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recebendo dadps de entrada e assincronismo com process.stdin.on</title>
+</head>
+<body>
+  <main>
+    <h1>process.stdin.on()</h1>
+    <p>Evento que capta os dados de que entram assincronimamente</p>
+    <p>On é o evento de fica ouvindo quando entra dados</p>
+    <p>O primeiro parametro significa q quando tiver dados ele vai ou vir uma função</p>
+    <p>O segundo parametro é a função chamada(callback) quando o evento on "dados" é disparado(após apertar a tecla enter)</p>
+    <p>
+      Quando criamos o listner de evento, ele tira a função callback da lista de processos (worker threads) e joga para a lista de evento (event queue).
+      Ai o event loop fica observando se o Enter é precionado. Se sim, ele joga a execução da função para a lista de processos (worker threads).
+    </p>
+    <code>
+      <script>
+        process.stdin.on("data", data => {
+          process.stdout.write( data.toString().trim() );
+        })
+      </script>
+    </code>
+
+  </main>
+</body>
+</html>

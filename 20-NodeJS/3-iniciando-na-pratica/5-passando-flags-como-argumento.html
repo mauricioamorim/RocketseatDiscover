@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passando flags como argumentos</title>
+</head>
+<body>
+  <header>Passando flags como argumentos</header>
+  <main>
+    <h2>flags</h1>
+    <p>Mostra um array com o caminho do node, caminho do arquivo q está sendo executado e com os argumentos passados</p>
+    <p>Crie um arquivo de JS puro com o script abaixo, salve com o nome teste.js, depois rode o node no terminal <code>node teste --nome "Mauricio" --sobrenome "Amorim"</code></p>
+    <p>obs. ordem das flags e arqumentos podem ser escritos invertidos tambem <code>node teste "Mauricio" --nome "Amorim" --sobrenome </code></p>
+    <code>
+      <script>
+        //visualize 
+        console.log(process.argv)
+        /* 
+        Resultado
+        [
+          '/Users/starter/.nvm/versions/node/v14.15.5/bin/node',
+          '/pasta-do-meu-projeto/teste',
+          '--nome',
+          'Mauricio,'
+          '--sobrenome',
+          'Amorim'
+        ]
+        */
+      </script>
+    </code>
+  </main>
+</body>
+</html>

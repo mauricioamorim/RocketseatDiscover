@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executando o primeiro arquivo e entendendo globals</title>
+</head>
+<body>
+  <header>Executando o primeiro arquivo e entendendo globals</header>
+  <main>
+    <h1>Executando o primeiro arquivo</h1>
+    <p>Crie um arquivo com extensão JS</p>
+    <p>
+      Adicione o código:
+      <code>
+        <script>
+          //o comando console está dentro das variaveis globais do node
+          console.log("Olá mundo")
+          //por isso assim tambem funciona
+          global.console.log("Olá mundo 2")
+          //veja mais da variavel global 
+          console.log(global)
+          console.log(__dirname)
+          console.log(__filename)
+        </script>
+      </code>
+    </p>
+    <p>Execute o arquivo digitando no terminal "node <nome-do-arquivo>" </p>
+    <p>Não precisa colocar nome da extensão no comando "node"</p>
+    <p><a href="https://nodejs.org/api/globals.html">Documentação Global objects</a></p>
+  </main>
+</body>
+</html>

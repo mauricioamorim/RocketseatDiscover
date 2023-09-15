@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que podemos fazer com NodeJS</title>
+</head>
+<body>
+  <header>
+    <h1>O que podemos fazer com NodeJS</h1>
+  </header>
+  <main>
+    <h1>O que podemos fazer com NodeJS</h1>
+    
+    <ul>
+      <li>Backend</li>
+      <li>Front End</li>
+      <li>Micro serviços</li>
+      <li>
+        API
+        <ul>
+          <li>WebApp</li>
+          <li>Mobile</li>
+          <li>Desktop</li>
+        </ul>
+      </li>
+      <li>Scripts e Automaçãp</li>
+      <li>Machine learning</li>
+      <li>I. A.</li>
+    </ul>
+
+    <h2>Para que não devemos usar NodejS</h2>
+    <p>Coisas q precisem de muito processamento ou seja CPU não é recomendado usar Node</p>
+    <p>exemplo: processamento de videos e fotos</p>
+
+    <h2>Vantagens</h2>
+    <p>Ele é muito rápido na execulção e para prototipar uma aplicação</p>
+    <p>alta escalabilidade</p>
+    <p>Aplicações de ponta</p>
+    <p>JS everywhere</p>
+    <p>Ecosistema gigante</p>
+    <p>
+      Casos de uso:
+      <ul>
+        <li>Netflix</li>
+        <li>Paypal</li>
+        <li>https://www.simform.com/nodejs-use-case/</li>
+      </ul>
+    </p>
+
+    <h2>O que é o NodeJS</h2>
+    <p>É um Javascrip Runtime Enviroment (ambiente de execulção em javascript)</p>
+    <p>Como se fosse um mini sistema operacional. Um ambiente completamente dele para rodar javascript</p>
+    <p>Ele fica separado do sistema operacinal mas consegue conversar com o mesmo e o sistema operacional conversa com o hardware</p>
+    <p>Não é um framework</p>
+    <p>Não é uma linguagem de programação</p>
+    <p>Por ser modular, mesmo a linguagem do ambiente sendo em JS, algumas coisas q funcionam no node não vão funcionar no navagador(browser) </p>
+
+    <h2>Google v8 javascript engine</h2>
+    <p>Compõe o ambiente, a máquina virtual, que irá rodar o JS na máquina</p>
+    <p>Interpretador de JS para linguagem de máquina</p>
+    <p>Criado em C++</p>
+    <p>Está bem próximo da linguagem de máquina (seu código no node > V8 > C++ > linguagem de máquina )</p>
+    <p>Baseado nas últimas features do JS</p>
+    <p>Focado para Chrome, mas tem todo o cuidado de não quebrar o Node</p>
+    <p>Não possui a DOM, console ou File System</p>
+
+    <h2>Como funciona?</h2>
+    <p>Node é sigle-threaded, non-blocking e asynchrounous</p>
+    <p>Imagine uma batalha entre dois restaurantes</p>
+    <div>
+      <h3>Restaurante do Tio Apache (diferencial: cada cliente tem seu próprio garçon)</h3>
+      <p>Um cliente vai fazer o pedido de uma pizza</p>
+      <ul>
+        <li>Um garçon é direcionado até sua mesa</li>
+        <li>Pega o pedido e leva até a cozinha, para o Chef preparar</li>
+        <li>O Chef, por regra do restaurante, irá proibir o garçon de voltar para o cliente até que sei pedido fique pronto</li>
+        <li>O cliente não pode pedir um suco enquanto espera a pizza pq o garçon está bloqueado</li>
+        <li>Após o pedido ficar pronto, o garçon leva de volta para o cliente</li>
+      </ul>
+      <p>Ao o cliente ir embora, por regra do restaurante, o garçon é despedido</p>
+      <p>
+        Resumo: A regra de bloquear os garçons e ter que contratar um garçon para cada cliente, 
+        torna o serviço caro e lento
+      </p>
+    </div>
+    <div>
+      <h3>Restaurante Noderson (diferencial: O garçon de nome Eveneto Lupin)</h3>
+      <p>Mesa 1: O cliente vai fazer o pedido de uma pizza</p>
+      <ul>
+        <li>Eveneto Lupin pega o pedido e leva para o Chef</li>
+        <li>Volta para pegar o próximo pedido</li>
+      </ul>
+
+      <p>Mesa 2: O cliente faz o pedido de uma salada</p>
+      <ul>
+        <li>Eveneto Lupin já pegou o pedido e levou para o Chef</li>
+        <li>Volta para pegar o próximo pedido</li>
+      </ul>
+
+      <p>O Chef tocou um sininho avisando que o pedido da mesa 1 já ficou pronto</p>
+      <ul>
+        <li>Eveneto Lupin busca e entrega o pedido da mesa 1</li>
+        <li>Volta para pegar o próximo pedido</li>
+      </ul>
+
+      <p>
+        Resumo: Eveneto Lupin trabalha de maneira assíncrona, fazendo mais de 1 evento de cada vez e não tem nada que o bloqueie.
+      </p>
+    </div>
+    <div>
+      <h3>Decifrando</h3>
+      <dl>
+        <dt>Tio Apache</dt>
+        <dd>Apache</dd>
+  
+        <dt>Noderson</dt>
+        <dd>Node</dd>
+  
+        <dt>Cliente</dt>
+        <dd>Usuário</dd>
+  
+        <dt>Pedido</dt>
+        <dd>Request</dd>
+  
+        <dt>Garçon</dt>
+        <dd>Thread</dd>
+  
+        <dt>Cozinha</dt>
+        <dd>Servidor</dd>
+  
+        <dt>Chef</dt>
+        <dd>Banco de dados</dd>
+  
+        <dt>Eveneto Lupin</dt>
+        <dd>Event Loop</dd>
+      </dl>
+    </div>
+
+    <h2>Avançando no Entendimento</h2>
+    <img src="./1-o-que-podemos-fazer-com-o-nodejs.png" alt="Avançando no Entendimento">
+    <p>Qualquer pedido feito entra na fila "Event Queue"</p>
+    <p>Quando alguma coisa vai para "Blocking Operation(setTimeout, await)" ele só volta para a fila "Event Queue" depois q ela estiver vazia</p>
+  </main>
+</body>
+</html>

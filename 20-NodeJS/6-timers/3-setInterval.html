@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setInterval e clearInterval</title>
+</head>
+<body>
+  <main>
+    <h1>setInterval</h1>
+    <p>Dispara callback no intervalo determinados de x em x milesegundos</p>
+    <code>
+      <script>
+        //arrow function
+        const Interval = 5000;
+        const print = () => console.log("checking")
+        setInterval(print, Interval);
+      </script>
+    </code>
+
+    <h2>clearInterval</h2>
+    <p>Cancela o callback do intervelo </p>
+    <code>
+      <script>
+        clearInterval(print);
+      </script>
+    </code>
+  </main>
+</body>
+</html>

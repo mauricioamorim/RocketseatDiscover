@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instalando dependências</title>
+</head>
+<body>
+  <header>Instalando dependências</header>
+  <main>
+    <h1><abbr title="Node Pack Manager">NPM</abbr>install <nome-do-pacote></h1>
+    <p>Para instalar uma dependência ao seu projeto basta digitar <code>npm install <nome-do-pacote></code></p>
+
+    <p>exemplo:</p>
+    <code>
+      npm install cfonts
+    </code>
+    <p>Após instalar essa dependência ficará registrada no arquivo package.json</p>
+    <code>
+      {
+        "name": "NodeJS", //Não pode ter o mesmo nome no npm
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js", //o arquivo principal do pacote
+        "scripts": {
+          "test": "echo \"Error: no test scpecified\" && exit 1"
+        },
+        "keywords": [
+         "aprendendo",
+         "nodejs"
+        ],
+        "author": "Mauricio Amorim",
+        "license": "ISC",
+        "dependencies": {
+          "cfonts": "^2.9.1"
+        }
+      }
+  </code>
+  </main>
+</body>
+</html>

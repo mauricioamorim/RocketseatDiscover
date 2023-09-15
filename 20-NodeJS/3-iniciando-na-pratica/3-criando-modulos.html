@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como criar um módulo?</title>
+</head>
+<body>
+  <header>
+    Como criar um módulo?
+  </header>
+  <main>
+    <h1>Exportando o módulo</h1>
+    <p>Crie um arquivo de JS puro q contém o módulo</p>
+    <p>Pode ser atribuido qualquer coisa a um módulo array, objeto, função, string e etc..</p>
+    <code>
+      <script>
+        module.exports = 'Olá Mundo'
+      </script>
+    </code>
+
+    <h2>Importando o módulo</h1>
+    <p>No aqruivo q vc dor usar o módulo escreve o seguinte script:</p>
+    <code>
+      <script>
+        const olaMundo = require('localizacao-do-modulo/nome-do-arquivo.js')
+        console.log(olaMundo);
+      </script>
+    </code>
+  </main>
+</body>
+</html>
